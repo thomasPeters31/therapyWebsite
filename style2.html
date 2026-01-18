@@ -48,14 +48,15 @@
         margin: 0 auto;
         padding: 30px 20px 90px;
         display: grid;
-        gap: 36px;
+        gap: 40px;
       }
 
-      nav {
+      header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
+        flex-wrap: wrap;
       }
 
       .brand {
@@ -63,6 +64,8 @@
         letter-spacing: 0.04em;
         font-size: 1.15rem;
         text-transform: uppercase;
+        text-decoration: none;
+        color: var(--ink);
       }
 
       .menu {
@@ -98,7 +101,7 @@
         display: grid;
         gap: 28px;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        align-items: center;
+        align-items: stretch;
       }
 
       .hero h1 {
@@ -138,50 +141,15 @@
         color: var(--plum);
       }
 
-      .hero-card {
-        background: white;
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        padding: 24px;
+      .stack {
         display: grid;
         gap: 16px;
-      }
-
-      .hero-card h2 {
-        margin: 0;
-        font-size: 1.3rem;
-      }
-
-      .hero-card ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 10px;
-        color: var(--muted);
-      }
-
-      .hero-card li::before {
-        content: "•";
-        color: var(--plum);
-        margin-right: 8px;
-      }
-
-      .grid {
-        display: grid;
-        gap: 18px;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       }
 
       .panel {
         padding: 20px;
         border-radius: 20px;
         background: var(--lilac);
-      }
-
-      .panel strong {
-        display: block;
-        margin-bottom: 6px;
       }
 
       .panel.alt {
@@ -192,7 +160,93 @@
         background: var(--peach);
       }
 
+      .panel strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .section-title {
+        font-family: "DM Serif Display", "Times New Roman", serif;
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      .services {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .service-card {
+        background: white;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 22px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline-item {
+        display: grid;
+        gap: 6px;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: var(--lilac);
+      }
+
+      .pricing {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .price-card {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 10px;
+      }
+
+      .price-card strong {
+        font-size: 1.3rem;
+      }
+
+      .faq {
+        display: grid;
+        gap: 12px;
+      }
+
+      details {
+        background: white;
+        border-radius: 16px;
+        padding: 14px 18px;
+        box-shadow: 0 14px 28px rgba(46, 14, 54, 0.12);
+      }
+
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        list-style: none;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
       .contact {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
+      .contact-card {
         background: var(--plum);
         color: white;
         border-radius: 24px;
@@ -201,10 +255,19 @@
         gap: 10px;
       }
 
-      .contact a {
+      .contact-card a {
         color: white;
         text-decoration: none;
         font-weight: 600;
+      }
+
+      .contact-card.light {
+        background: var(--lilac);
+        color: var(--ink);
+      }
+
+      .contact-card.light a {
+        color: var(--ink);
       }
 
       .footer {
@@ -223,11 +286,6 @@
       }
 
       @media (max-width: 720px) {
-        nav {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
         .menu {
           width: 100%;
           justify-content: space-between;
@@ -239,59 +297,140 @@
     <div class="topbar">Free 15-minute introductory calls available.</div>
 
     <main class="shell">
-      <nav>
-        <a class="brand" href="idex.html">Counselling HQ</a>
+      <header>
+        <a class="brand" href="index.html">Counselling HQ</a>
         <div class="menu">
           <a href="#">Home</a>
           <a href="#">About</a>
-          <a href="#">Services &amp; Fees</a>
+          <a href="#">Services</a>
+          <a href="#">Fees</a>
           <a href="#">Contact</a>
           <a class="cta" href="#">Get in touch</a>
         </div>
-      </nav>
+      </header>
 
       <section class="hero">
         <div>
-          <h1>Counselling &amp; psychotherapy in Ashford, Kent.</h1>
+          <h1>Counselling and psychotherapy in Ashford, Kent.</h1>
           <p>
-            At Counselling HQ, you don't need to have the answers before reaching out.
-            This is a calm and confidential space to discuss things, feel understood,
-            and move forward at your own pace.
+            At Counselling HQ, you do not need to have the answers before reaching out.
+            This is a calm and confidential space to discuss things, feel understood, and
+            move forward at your own pace.
           </p>
           <div class="hero-actions">
             <a class="primary" href="#">Book a free 15-minute call</a>
             <a class="secondary" href="#">View services</a>
           </div>
         </div>
-        <aside class="hero-card">
-          <h2>Location &amp; sessions</h2>
-          <ul>
-            <li>Face-to-face in Ashford, Kent</li>
-            <li>Online video and telephone sessions</li>
-            <li>Email: tashacounsellinghq@gmail.com</li>
-          </ul>
-        </aside>
+        <div class="stack">
+          <div class="panel">
+            <strong>Session at a glance</strong>
+            Face-to-face in Ashford, Kent. Online video and telephone sessions available.
+          </div>
+          <div class="panel alt">
+            <strong>Response time</strong>
+            I aim to respond to emails within 48 hours.
+          </div>
+          <div class="panel warm">
+            <strong>Email</strong>
+            tashacounsellinghq@gmail.com
+          </div>
+        </div>
       </section>
 
-      <section class="grid">
-        <article class="panel">
-          <strong>How I work</strong>
-          Integrative, holistic, and person-centred therapy tailored to your needs.
-        </article>
-        <article class="panel alt">
-          <strong>Adults &amp; young people</strong>
-          Support for anxiety, grief, burnout, low mood, and relationship difficulties.
-        </article>
-        <article class="panel warm">
-          <strong>Children &amp; families</strong>
-          Gentle, creative support for worry, loss, school challenges, and regulation.
-        </article>
+      <section>
+        <h2 class="section-title">Ways I can support you</h2>
+        <div class="services">
+          <article class="service-card">
+            <strong>Adults and young people</strong>
+            Anxiety, depression, stress, grief, relationship difficulties, and life
+            transitions.
+          </article>
+          <article class="service-card">
+            <strong>Children</strong>
+            Anxiety, school challenges, family change, emotional regulation, and low mood.
+          </article>
+          <article class="service-card">
+            <strong>Inclusive practice</strong>
+            LGBTQIA+ affirming and culturally sensitive support for all backgrounds.
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">How the work unfolds</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>1. Free introductory call</strong>
+            Share what brings you to counselling and ask any questions.
+          </div>
+          <div class="timeline-item">
+            <strong>2. First session</strong>
+            We complete a gentle assessment and agree expectations and confidentiality.
+          </div>
+          <div class="timeline-item">
+            <strong>3. Ongoing support</strong>
+            We review goals together and go at a pace that feels right for you.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Fees and packages</h2>
+        <div class="pricing">
+          <div class="price-card">
+            <strong>Single session</strong>
+            65 pounds per therapeutic hour (50 minutes).
+          </div>
+          <div class="price-card">
+            <strong>Block of three</strong>
+            180 pounds when booked as a block of three or more.
+          </div>
+          <div class="price-card">
+            <strong>Concessions</strong>
+            Available for low-waged earners and student counsellors.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What happens in a counselling session?</summary>
+            <p>
+              We talk about whatever feels important to you. There is no script or
+              pressure, just a safe space to explore thoughts, feelings, and patterns.
+            </p>
+          </details>
+          <details>
+            <summary>How many sessions will I need?</summary>
+            <p>
+              The number varies. Some people come for 6 to 12 sessions, others choose
+              longer-term support. We review goals regularly.
+            </p>
+          </details>
+          <details>
+            <summary>Is what I share confidential?</summary>
+            <p>
+              Everything is confidential with rare exceptions for serious risk of harm or
+              legal requirements. Wherever possible this is discussed with you first.
+            </p>
+          </details>
+        </div>
       </section>
 
       <section class="contact">
-        <strong>Ready to take the first step?</strong>
-        <span>I aim to respond to emails within 48 hours.</span>
-        <a href="mailto:tashacounsellinghq@gmail.com">tashacounsellinghq@gmail.com</a>
+        <div class="contact-card">
+          <strong>Ready to take the first step?</strong>
+          <span>Book a free 15-minute call or email to get started.</span>
+          <a href="mailto:tashacounsellinghq@gmail.com">tashacounsellinghq@gmail.com</a>
+        </div>
+        <div class="contact-card light">
+          <strong>Location</strong>
+          <span>Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.</span>
+          <a href="#">Get directions</a>
+        </div>
       </section>
 
       <div class="footer">

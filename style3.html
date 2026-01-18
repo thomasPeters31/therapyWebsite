@@ -63,10 +63,10 @@
         margin: 0 auto;
         padding: 28px 20px 90px;
         display: grid;
-        gap: 40px;
+        gap: 36px;
       }
 
-      nav {
+      header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -99,32 +99,47 @@
         color: var(--steel);
       }
 
-      .hero {
+      .banner {
+        border-radius: var(--radius);
+        overflow: hidden;
         display: grid;
-        gap: 32px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        box-shadow: var(--shadow);
       }
 
-      .hero h1 {
+      .banner .copy {
+        background: white;
+        padding: 32px;
+        display: grid;
+        gap: 16px;
+      }
+
+      .banner h1 {
         font-family: "Merriweather", "Times New Roman", serif;
-        font-size: clamp(2.6rem, 1.6rem + 3vw, 4rem);
-        margin: 0 0 16px;
+        font-size: clamp(2.4rem, 1.6rem + 3vw, 3.8rem);
+        margin: 0;
       }
 
-      .hero p {
-        margin: 0 0 22px;
+      .banner p {
+        margin: 0;
         color: var(--muted);
-        max-width: 540px;
       }
 
-      .hero-actions {
+      .banner .image {
+        min-height: 260px;
+        background:
+          linear-gradient(135deg, rgba(44, 102, 156, 0.8), rgba(31, 79, 125, 0.55)),
+          url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80")
+            center/cover;
+      }
+
+      .actions {
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
       }
 
-      .hero-actions a {
+      .actions a {
         text-decoration: none;
         padding: 12px 22px;
         border-radius: 999px;
@@ -132,61 +147,69 @@
         font-size: 0.9rem;
       }
 
-      .hero-actions .primary {
+      .actions .primary {
         background: var(--sky);
         color: white;
         box-shadow: 0 16px 30px rgba(44, 102, 156, 0.25);
       }
 
-      .hero-actions .secondary {
+      .actions .secondary {
         border: 1px solid var(--sky);
         color: var(--sky);
       }
 
-      .hero-media {
-        position: relative;
-        border-radius: var(--radius);
+      .stats {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .stat {
+        background: white;
+        padding: 18px;
+        border-radius: 18px;
+        box-shadow: 0 16px 30px rgba(32, 63, 92, 0.1);
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.2rem;
+      }
+
+      .section-title {
+        font-family: "Merriweather", "Times New Roman", serif;
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 16px;
         overflow: hidden;
         box-shadow: var(--shadow);
-        min-height: 320px;
-        background:
-          linear-gradient(135deg, rgba(44, 102, 156, 0.85), rgba(31, 79, 125, 0.6)),
-          url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80")
-            center/cover;
       }
 
-      .hero-media .badge {
-        position: absolute;
-        bottom: 22px;
-        left: 22px;
-        background: rgba(255, 255, 255, 0.92);
-        padding: 12px 16px;
-        border-radius: 14px;
+      th,
+      td {
+        text-align: left;
+        padding: 14px 16px;
+        border-bottom: 1px solid #e5edf3;
+      }
+
+      th {
+        background: var(--mist);
         font-weight: 600;
-        color: var(--steel);
       }
 
-      .cards {
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      .grid {
         display: grid;
         gap: 18px;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-
-      .card {
-        background: white;
-        padding: 20px;
-        border-radius: 18px;
-        box-shadow: 0 18px 35px rgba(32, 63, 92, 0.12);
-      }
-
-      .card strong {
-        display: block;
-        margin-bottom: 8px;
-      }
-
-      .split {
-        display: grid;
-        gap: 20px;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
@@ -196,9 +219,40 @@
         border-radius: 18px;
       }
 
-      .panel h3 {
-        margin: 0 0 10px;
-        font-family: "Merriweather", "Times New Roman", serif;
+      .panel ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .badge {
+        background: var(--sand);
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+      }
+
+      details {
+        background: white;
+        border-radius: 16px;
+        padding: 14px 18px;
+        box-shadow: 0 14px 28px rgba(46, 14, 54, 0.08);
+      }
+
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+        list-style: none;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
       }
 
       .cta-band {
@@ -235,8 +289,8 @@
     </div>
 
     <main class="shell">
-      <nav>
-        <a class="logo" href="idex.html">Counselling HQ</a>
+      <header>
+        <a class="logo" href="index.html">Counselling HQ</a>
         <div class="nav-links">
           <a href="#">Home</a>
           <a href="#">About</a>
@@ -245,57 +299,126 @@
           <a href="#">FAQ</a>
           <a href="#">Contact</a>
         </div>
-      </nav>
+      </header>
 
-      <section class="hero">
-        <div>
+      <section class="banner">
+        <div class="copy">
           <h1>Taking the first step can feel hard.</h1>
           <p>
             There is no pressure to have the right words. You can show up feeling unsure,
-            overwhelmed, or quiet — all of you is welcome. I offer a free 15-minute
-            introductory call to explore working together.
+            overwhelmed, or quiet. A free 15-minute introductory call is available to
+            explore working together.
           </p>
-          <div class="hero-actions">
+          <div class="actions">
             <a class="primary" href="#">Book a free 15-minute call</a>
             <a class="secondary" href="#">View services</a>
           </div>
         </div>
-        <aside class="hero-media">
-          <div class="badge">Ashford &amp; Online</div>
-        </aside>
+        <div class="image" role="img" aria-label="Calm counselling environment"></div>
       </section>
 
-      <section class="cards">
-        <article class="card">
-          <strong>Fees</strong>
-          Sessions are £65 per therapeutic hour (50 minutes).
+      <section class="stats">
+        <div class="stat">
+          <strong>Location</strong>
+          Ashford, Kent with online options.
+        </div>
+        <div class="stat">
+          <strong>Session length</strong>
+          50-minute therapeutic hour.
+        </div>
+        <div class="stat">
+          <strong>Practice focus</strong>
+          Integrative, person-centred care.
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Fees</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Session type</th>
+              <th>Cost</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Single session</td>
+              <td>65 pounds</td>
+              <td>Per therapeutic hour (50 minutes).</td>
+            </tr>
+            <tr>
+              <td>Block of three</td>
+              <td>180 pounds</td>
+              <td>Discounted when booked together.</td>
+            </tr>
+            <tr>
+              <td>Concessions</td>
+              <td>Available</td>
+              <td>Low-waged earners and student counsellors.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2 class="section-title">Policies and ethics</h2>
+          <ul>
+            <li>24 hours notice required for cancellations or reschedules.</li>
+            <li>Sessions cancelled within 24 hours are still charged.</li>
+            <li>BACP member committed to ethical standards and supervision.</li>
+          </ul>
         </article>
-        <article class="card">
-          <strong>Block booking</strong>
-          £180 when booked as a block of three or more.
-        </article>
-        <article class="card">
-          <strong>Concessions</strong>
-          Available for low-waged earners and student counsellors.
+        <article class="panel">
+          <h2 class="section-title">Signposting</h2>
+          <ul>
+            <li>Counselling HQ is not an emergency service.</li>
+            <li>In crisis, contact your GP or call 999 in immediate danger.</li>
+            <li>Samaritans: 116 123 (24/7).</li>
+          </ul>
         </article>
       </section>
 
-      <section class="split">
-        <article class="panel">
-          <h3>Policies &amp; ethics</h3>
-          <p>
-            Please give at least 24 hours' notice to cancel or reschedule. Sessions cancelled
-            with less than 24 hours' notice are still charged. As a member of the BACP, I
-            commit to high ethical standards, ongoing training, and supervision.
-          </p>
-        </article>
-        <article class="panel">
-          <h3>Signposting</h3>
-          <p>
-            Counselling HQ is not an emergency service. In crisis, contact your GP, call 999
-            if in immediate danger, or reach Samaritans on 116 123 (24/7).
-          </p>
-        </article>
+      <section>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <div class="grid">
+          <details>
+            <summary>What happens in the first session?</summary>
+            <p>
+              We take time to get to know each other. I complete a short assessment, we
+              discuss what brought you to counselling, and we review the counselling
+              agreement so expectations and confidentiality are clear.
+            </p>
+          </details>
+          <details>
+            <summary>Can I end counselling at any time?</summary>
+            <p>
+              Yes. You are free to end counselling whenever you feel ready. Where possible
+              we plan an ending session together to bring the work to a gentle close.
+            </p>
+          </details>
+          <details>
+            <summary>How often will sessions occur?</summary>
+            <p>
+              Weekly sessions often work best, or fortnightly if that is your preference.
+              We will arrange what suits you depending on your needs.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Qualifications and training</h2>
+        <div class="badges">
+          <span class="badge">Dip.Couns (CPCAB)</span>
+          <span class="badge">Level 5 Psychotherapeutic Counselling (in progress)</span>
+          <span class="badge">BACP Registered Member</span>
+          <span class="badge">Enhanced DBS</span>
+          <span class="badge">Professional indemnity insurance</span>
+          <span class="badge">CPD and supervision</span>
+        </div>
       </section>
 
       <section class="cta-band">
