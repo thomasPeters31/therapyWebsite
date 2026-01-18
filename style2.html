@@ -13,9 +13,9 @@
     <style>
       :root {
         color-scheme: light;
-        --ink: #2b2430;
+        --ink: #1f1824;
         --muted: #6c6075;
-        --plum: #2e0e36;
+        --plum: #2d0736;
         --lilac: #f3eef7;
         --peach: #f7ddd5;
         --mint: #e7f3f2;
@@ -31,27 +31,34 @@
         margin: 0;
         font-family: "Poppins", "Segoe UI", sans-serif;
         color: var(--ink);
-        background: linear-gradient(180deg, #ffffff 0%, #f6f1f9 35%, #f7f2f6 100%);
+        background: #ffffff;
         min-height: 100vh;
       }
 
       .topbar {
-        background: var(--plum);
-        color: white;
-        padding: 10px 20px;
-        font-size: 0.9rem;
+        background: #fafdfd;
+        color: var(--ink);
+        padding: 10px 16px;
         text-align: center;
+        font-size: 0.9rem;
+        border-bottom: 1px solid #ede6f2;
       }
 
-      .shell {
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 30px 20px 90px;
-        display: grid;
-        gap: 40px;
+      .topbar a {
+        color: var(--plum);
+        text-decoration: none;
+        font-weight: 600;
       }
 
       header {
+        background: var(--plum);
+        color: white;
+      }
+
+      .header-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 18px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -59,67 +66,63 @@
         flex-wrap: wrap;
       }
 
-      .brand {
+      .logo {
         font-family: "DM Serif Display", "Times New Roman", serif;
         letter-spacing: 0.04em;
-        font-size: 1.15rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
         text-decoration: none;
-        color: var(--ink);
+        color: white;
       }
 
-      .menu {
+      nav {
         display: flex;
+        align-items: center;
         gap: 18px;
         flex-wrap: wrap;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
         font-size: 0.95rem;
       }
 
-      .menu a {
-        text-decoration: none;
-        color: var(--muted);
-        font-weight: 500;
-      }
-
-      .menu a:hover {
-        color: var(--ink);
-      }
-
-      .cta {
-        background: var(--plum);
-        color: white;
-        text-decoration: none;
-        padding: 10px 18px;
-        border-radius: 999px;
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-
       .hero {
+        background:
+          linear-gradient(135deg, rgba(45, 7, 54, 0.95), rgba(45, 7, 54, 0.85)),
+          url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80")
+            center/cover;
+        color: white;
+      }
+
+      .hero-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 72px 20px 90px;
         display: grid;
-        gap: 28px;
+        gap: 32px;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        align-items: stretch;
+        align-items: center;
       }
 
       .hero h1 {
         font-family: "DM Serif Display", "Times New Roman", serif;
-        font-size: clamp(2.6rem, 1.7rem + 3vw, 4.1rem);
+        font-size: clamp(2.6rem, 1.7rem + 3vw, 4.2rem);
         margin: 0 0 14px;
       }
 
       .hero p {
         margin: 0 0 22px;
-        color: var(--muted);
         max-width: 520px;
+        color: #efe6f5;
       }
 
       .hero-actions {
         display: flex;
-        flex-wrap: wrap;
         gap: 12px;
+        flex-wrap: wrap;
       }
 
       .hero-actions a {
@@ -131,143 +134,102 @@
       }
 
       .hero-actions .primary {
-        background: var(--plum);
-        color: white;
-        box-shadow: 0 16px 32px rgba(46, 14, 54, 0.25);
-      }
-
-      .hero-actions .secondary {
-        border: 1px solid var(--plum);
+        background: white;
         color: var(--plum);
       }
 
-      .stack {
+      .hero-actions .secondary {
+        border: 1px solid white;
+        color: white;
+      }
+
+      .shell {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 48px 20px 90px;
         display: grid;
-        gap: 16px;
-      }
-
-      .panel {
-        padding: 20px;
-        border-radius: 20px;
-        background: var(--lilac);
-      }
-
-      .panel.alt {
-        background: var(--mint);
-      }
-
-      .panel.warm {
-        background: var(--peach);
-      }
-
-      .panel strong {
-        display: block;
-        margin-bottom: 6px;
+        gap: 36px;
       }
 
       .section-title {
         font-family: "DM Serif Display", "Times New Roman", serif;
         font-size: 2rem;
-        margin: 0;
+        margin: 0 0 8px;
       }
 
-      .services {
+      .cards {
         display: grid;
         gap: 18px;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
-      .service-card {
-        background: white;
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        padding: 22px;
-        display: grid;
-        gap: 10px;
-      }
-
-      .timeline {
-        display: grid;
-        gap: 16px;
-      }
-
-      .timeline-item {
-        display: grid;
-        gap: 6px;
-        padding: 16px 18px;
-        border-radius: 18px;
+      .card {
         background: var(--lilac);
-      }
-
-      .pricing {
-        display: grid;
-        gap: 18px;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-
-      .price-card {
-        background: white;
         border-radius: 20px;
         padding: 20px;
-        box-shadow: var(--shadow);
+      }
+
+      .card.alt {
+        background: var(--mint);
+      }
+
+      .card.warm {
+        background: var(--peach);
+      }
+
+      .card strong {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .band {
+        background: var(--plum);
+        color: white;
+        border-radius: 24px;
+        padding: 26px;
         display: grid;
         gap: 10px;
       }
 
-      .price-card strong {
-        font-size: 1.3rem;
-      }
-
-      .faq {
-        display: grid;
-        gap: 12px;
-      }
-
-      details {
-        background: white;
-        border-radius: 16px;
-        padding: 14px 18px;
-        box-shadow: 0 14px 28px rgba(46, 14, 54, 0.12);
-      }
-
-      summary {
-        cursor: pointer;
+      .band a {
+        color: white;
+        text-decoration: none;
         font-weight: 600;
-        list-style: none;
       }
 
-      summary::-webkit-details-marker {
-        display: none;
+      .media-row {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
-      .contact {
+      .media {
+        border-radius: 20px;
+        min-height: 180px;
+        background:
+          linear-gradient(130deg, rgba(247, 221, 213, 0.7), rgba(243, 238, 247, 0.8)),
+          url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80")
+            center/cover;
+        box-shadow: var(--shadow);
+      }
+
+      .contact-grid {
         display: grid;
         gap: 18px;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
       .contact-card {
-        background: var(--plum);
-        color: white;
-        border-radius: 24px;
-        padding: 24px;
-        display: grid;
-        gap: 10px;
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: var(--shadow);
       }
 
       .contact-card a {
-        color: white;
         text-decoration: none;
+        color: var(--plum);
         font-weight: 600;
-      }
-
-      .contact-card.light {
-        background: var(--lilac);
-        color: var(--ink);
-      }
-
-      .contact-card.light a {
-        color: var(--ink);
       }
 
       .footer {
@@ -281,12 +243,17 @@
 
       .footer a {
         text-decoration: none;
-        color: var(--ink);
+        color: var(--plum);
         font-weight: 600;
       }
 
       @media (max-width: 720px) {
-        .menu {
+        .header-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav {
           width: 100%;
           justify-content: space-between;
         }
@@ -294,143 +261,107 @@
     </style>
   </head>
   <body>
-    <div class="topbar">Free 15-minute introductory calls available.</div>
+    <div class="topbar">
+      New discounted session package available now. <a href="#">Details</a>
+    </div>
 
-    <main class="shell">
-      <header>
-        <a class="brand" href="index.html">Counselling HQ</a>
-        <div class="menu">
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="index.html">Counselling HQ</a>
+        <nav>
           <a href="#">Home</a>
           <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Fees</a>
+          <a href="#">Services &amp; Fees</a>
           <a href="#">Contact</a>
-          <a class="cta" href="#">Get in touch</a>
-        </div>
-      </header>
+          <a href="#">Blogs</a>
+        </nav>
+      </div>
+    </header>
 
-      <section class="hero">
+    <section class="hero">
+      <div class="hero-inner">
         <div>
-          <h1>Counselling and psychotherapy in Ashford, Kent.</h1>
+          <h1>Private counselling in Ashford, Kent.</h1>
           <p>
-            At Counselling HQ, you do not need to have the answers before reaching out.
-            This is a calm and confidential space to discuss things, feel understood, and
-            move forward at your own pace.
+            A warm, professional space for adults, young people, and children. Face-to-face,
+            online, and telephone sessions available to support you at your pace.
           </p>
           <div class="hero-actions">
             <a class="primary" href="#">Book a free 15-minute call</a>
             <a class="secondary" href="#">View services</a>
           </div>
         </div>
-        <div class="stack">
-          <div class="panel">
-            <strong>Session at a glance</strong>
-            Face-to-face in Ashford, Kent. Online video and telephone sessions available.
-          </div>
-          <div class="panel alt">
-            <strong>Response time</strong>
-            I aim to respond to emails within 48 hours.
-          </div>
-          <div class="panel warm">
-            <strong>Email</strong>
-            tashacounsellinghq@gmail.com
-          </div>
+        <div>
+          <p>
+            Counselling HQ offers integrative, person-centred therapy with a calm and
+            supportive approach. You are welcome exactly as you are.
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
 
+    <main class="shell">
       <section>
-        <h2 class="section-title">Ways I can support you</h2>
-        <div class="services">
-          <article class="service-card">
-            <strong>Adults and young people</strong>
-            Anxiety, depression, stress, grief, relationship difficulties, and life
-            transitions.
+        <h2 class="section-title">Support areas</h2>
+        <div class="cards">
+          <article class="card">
+            <strong>Adults &amp; young people</strong>
+            Anxiety, depression, stress, grief, and relationship difficulties.
           </article>
-          <article class="service-card">
+          <article class="card alt">
             <strong>Children</strong>
-            Anxiety, school challenges, family change, emotional regulation, and low mood.
+            School challenges, worry, loss, emotional regulation, and family change.
           </article>
-          <article class="service-card">
-            <strong>Inclusive practice</strong>
-            LGBTQIA+ affirming and culturally sensitive support for all backgrounds.
+          <article class="card warm">
+            <strong>Neurodiversity</strong>
+            Experience supporting autism, ADHD, sensory differences, and overwhelm.
           </article>
         </div>
       </section>
 
+      <section class="band">
+        <strong>How I work</strong>
+        <span>
+          Integrative, holistic, and person-centred care, drawing on CBT-informed tools,
+          Transactional Analysis, IFS, and creative methods.
+        </span>
+        <a href="mailto:tashacounsellinghq@gmail.com">tashacounsellinghq@gmail.com</a>
+      </section>
+
       <section>
-        <h2 class="section-title">How the work unfolds</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <strong>1. Free introductory call</strong>
-            Share what brings you to counselling and ask any questions.
+        <h2 class="section-title">Ways to connect</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <strong>Location</strong>
+            <p>Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.</p>
+            <a href="#">Get directions</a>
           </div>
-          <div class="timeline-item">
-            <strong>2. First session</strong>
-            We complete a gentle assessment and agree expectations and confidentiality.
+          <div class="contact-card">
+            <strong>Online sessions</strong>
+            <p>Secure video and telephone sessions are available.</p>
+            <a href="#">Find out more</a>
           </div>
-          <div class="timeline-item">
-            <strong>3. Ongoing support</strong>
-            We review goals together and go at a pace that feels right for you.
+          <div class="contact-card">
+            <strong>Email</strong>
+            <p>I aim to respond within 48 hours.</p>
+            <a href="mailto:tashacounsellinghq@gmail.com">tashacounsellinghq@gmail.com</a>
           </div>
         </div>
       </section>
 
       <section>
-        <h2 class="section-title">Fees and packages</h2>
-        <div class="pricing">
-          <div class="price-card">
-            <strong>Single session</strong>
-            65 pounds per therapeutic hour (50 minutes).
-          </div>
-          <div class="price-card">
-            <strong>Block of three</strong>
-            180 pounds when booked as a block of three or more.
-          </div>
-          <div class="price-card">
-            <strong>Concessions</strong>
-            Available for low-waged earners and student counsellors.
-          </div>
+        <h2 class="section-title">Therapy room</h2>
+        <div class="media-row">
+          <div class="media" role="img" aria-label="Therapy room interior"></div>
+          <div class="media" role="img" aria-label="Counselling space detail"></div>
         </div>
       </section>
 
-      <section>
-        <h2 class="section-title">Frequently asked questions</h2>
-        <div class="faq">
-          <details>
-            <summary>What happens in a counselling session?</summary>
-            <p>
-              We talk about whatever feels important to you. There is no script or
-              pressure, just a safe space to explore thoughts, feelings, and patterns.
-            </p>
-          </details>
-          <details>
-            <summary>How many sessions will I need?</summary>
-            <p>
-              The number varies. Some people come for 6 to 12 sessions, others choose
-              longer-term support. We review goals regularly.
-            </p>
-          </details>
-          <details>
-            <summary>Is what I share confidential?</summary>
-            <p>
-              Everything is confidential with rare exceptions for serious risk of harm or
-              legal requirements. Wherever possible this is discussed with you first.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <section class="contact">
-        <div class="contact-card">
-          <strong>Ready to take the first step?</strong>
-          <span>Book a free 15-minute call or email to get started.</span>
-          <a href="mailto:tashacounsellinghq@gmail.com">tashacounsellinghq@gmail.com</a>
-        </div>
-        <div class="contact-card light">
-          <strong>Location</strong>
-          <span>Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.</span>
-          <a href="#">Get directions</a>
-        </div>
+      <section class="band">
+        <strong>Fees</strong>
+        <span>65 pounds per therapeutic hour (50 minutes).</span>
+        <span>180 pounds when booked as a block of three or more.</span>
+        <span>Concessions available for low-waged earners and student counsellors.</span>
       </section>
 
       <div class="footer">
