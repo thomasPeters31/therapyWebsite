@@ -13,14 +13,14 @@
     <style>
       :root {
         color-scheme: light;
-        --ink: #2c2622;
-        --muted: #5c534c;
-        --cream: #f7f1e8;
-        --sand: #efe4d6;
+        --ink: #241f1b;
+        --muted: #5e544d;
+        --cream: #f6f1e9;
+        --sand: #eee3d4;
         --olive: #6b7b6a;
-        --stone: #d9cbbd;
-        --shadow: 0 24px 50px rgba(37, 31, 27, 0.18);
-        --radius: 24px;
+        --stone: #d6c8bb;
+        --shadow: 0 24px 50px rgba(36, 30, 25, 0.18);
+        --radius: 26px;
       }
 
       * {
@@ -32,9 +32,23 @@
         font-family: "Nunito", "Segoe UI", sans-serif;
         color: var(--ink);
         background:
-          radial-gradient(circle at top right, rgba(217, 203, 189, 0.6), transparent 45%),
-          linear-gradient(180deg, var(--cream) 0%, #f3e8db 40%, #eee0d2 100%);
+          radial-gradient(circle at top left, rgba(214, 200, 187, 0.55), transparent 45%),
+          linear-gradient(180deg, var(--cream) 0%, #f3e8db 45%, #eee0d2 100%);
         min-height: 100vh;
+      }
+
+      .announcement {
+        background: #f2eadf;
+        color: var(--ink);
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+      }
+
+      .announcement a {
+        color: var(--ink);
+        text-decoration: underline;
+        font-weight: 600;
       }
 
       .page {
@@ -42,139 +56,120 @@
         margin: 0 auto;
         padding: 28px 20px 90px;
         display: grid;
-        gap: 48px;
+        gap: 56px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-family: "Playfair Display", "Times New Roman", serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        text-decoration: none;
+        color: var(--ink);
       }
 
       nav {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        font-size: 0.95rem;
+        gap: 18px;
+        flex-wrap: wrap;
       }
 
       nav a {
         text-decoration: none;
-        color: var(--ink);
-        font-weight: 600;
-      }
-
-      .logo {
-        font-family: "Playfair Display", "Times New Roman", serif;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-      }
-
-      .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-      }
-
-      .ghost {
-        font-size: 0.9rem;
         color: var(--muted);
+        font-weight: 600;
+        font-size: 0.9rem;
       }
 
-      .cta {
+      .button {
         padding: 10px 18px;
         border-radius: 999px;
         border: 1.5px solid var(--ink);
         font-weight: 600;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        font-size: 0.78rem;
+        font-size: 0.76rem;
+        color: var(--ink);
+        text-decoration: none;
       }
 
       .hero {
         display: grid;
         gap: 32px;
-        align-items: center;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        align-items: center;
       }
 
       .hero h1 {
         font-family: "Playfair Display", "Times New Roman", serif;
-        font-size: clamp(2.6rem, 1.5rem + 3vw, 4.3rem);
+        font-size: clamp(2.6rem, 1.6rem + 3vw, 4.4rem);
         margin: 0 0 16px;
       }
 
       .hero p {
-        margin: 0 0 22px;
+        margin: 0 0 20px;
         color: var(--muted);
         font-size: 1.05rem;
         max-width: 520px;
       }
 
-      .hero-buttons {
+      .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
       }
 
-      .hero-buttons a {
+      .hero-actions a {
         text-decoration: none;
         padding: 12px 22px;
         border-radius: 999px;
         font-weight: 600;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: transform 0.2s ease;
       }
 
-      .hero-buttons .primary {
+      .hero-actions .primary {
         background: var(--olive);
         color: white;
-        box-shadow: 0 16px 30px rgba(107, 123, 106, 0.3);
+        box-shadow: 0 16px 30px rgba(107, 123, 106, 0.28);
       }
 
-      .hero-buttons .secondary {
+      .hero-actions .secondary {
         border: 1px solid var(--olive);
         color: var(--olive);
       }
 
-      .hero-buttons a:hover {
+      .hero-actions a:hover {
         transform: translateY(-2px);
       }
 
-      .hero-card {
-        background: rgba(255, 255, 255, 0.78);
+      .hero-image {
         border-radius: var(--radius);
-        padding: 26px;
+        min-height: 320px;
+        background:
+          linear-gradient(140deg, rgba(107, 123, 106, 0.2), rgba(214, 200, 187, 0.7)),
+          url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80")
+            center/cover;
         box-shadow: var(--shadow);
-        display: grid;
-        gap: 18px;
       }
 
-      .hero-card h2 {
+      .section-title {
         font-family: "Playfair Display", "Times New Roman", serif;
-        font-size: 1.5rem;
-        margin: 0;
-      }
-
-      .hero-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        gap: 10px;
-        color: var(--muted);
-      }
-
-      .hero-card li::before {
-        content: "•";
-        color: var(--olive);
-        margin-right: 8px;
+        font-size: 2rem;
+        margin: 0 0 14px;
       }
 
       .section {
         display: grid;
-        gap: 18px;
-      }
-
-      .section h3 {
-        font-family: "Playfair Display", "Times New Roman", serif;
-        margin: 0;
-        font-size: 1.8rem;
+        gap: 20px;
       }
 
       .split {
@@ -183,39 +178,22 @@
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
 
-      .portrait {
-        border-radius: 24px;
-        min-height: 280px;
-        background:
-          linear-gradient(140deg, rgba(107, 123, 106, 0.2), rgba(217, 203, 189, 0.6)),
-          url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80")
-            center/cover;
-        box-shadow: var(--shadow);
-      }
-
-      .tile {
+      .panel {
         background: rgba(255, 255, 255, 0.85);
         border-radius: 20px;
-        padding: 20px;
-        box-shadow: 0 20px 40px rgba(37, 31, 27, 0.12);
+        padding: 22px;
+        box-shadow: 0 18px 35px rgba(36, 30, 25, 0.12);
       }
 
-      .tile strong {
+      .panel strong {
         display: block;
         margin-bottom: 8px;
       }
 
-      .badge-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .badge {
-        background: var(--sand);
-        padding: 8px 12px;
-        border-radius: 999px;
-        font-size: 0.9rem;
+      .list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
       }
 
       .quote {
@@ -224,17 +202,21 @@
         color: var(--olive);
       }
 
-      .price-card {
-        background: white;
+      .cta-band {
+        background: var(--sand);
         border-radius: 20px;
-        padding: 22px;
-        box-shadow: var(--shadow);
-        display: grid;
-        gap: 10px;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
       }
 
-      .price-card strong {
-        font-size: 1.4rem;
+      .cta-band a {
+        text-decoration: none;
+        color: var(--ink);
+        font-weight: 600;
       }
 
       .note {
@@ -244,32 +226,13 @@
         color: var(--muted);
       }
 
-      .footer-note {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 16px;
-        background: var(--sand);
-        padding: 18px 22px;
-        border-radius: 20px;
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-
-      .footer-note a {
-        text-decoration: none;
-        color: var(--ink);
-        font-weight: 600;
-      }
-
-      @media (max-width: 680px) {
-        nav {
+      @media (max-width: 720px) {
+        header {
           flex-direction: column;
           align-items: flex-start;
         }
 
-        .nav-actions {
+        nav {
           width: 100%;
           justify-content: space-between;
         }
@@ -277,134 +240,142 @@
     </style>
   </head>
   <body>
+    <div class="announcement">
+      Free 15-minute introductory calls available. <a href="#">Get in touch</a>
+    </div>
+
     <main class="page">
-      <nav>
+      <header>
         <a class="logo" href="index.html">Counselling HQ</a>
-        <div class="nav-actions">
-          <a class="ghost" href="#">About</a>
-          <a class="ghost" href="#">How I work</a>
-          <a class="ghost" href="#">Contact</a>
-          <a class="cta" href="#">Get in touch</a>
-        </div>
-      </nav>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">How I work</a>
+          <a href="#">Fees</a>
+          <a href="#">Contact</a>
+          <a class="button" href="#">Get in touch</a>
+        </nav>
+      </header>
 
       <section class="hero">
         <div>
-          <h1>Welcome to Counselling HQ.</h1>
+          <h1>Therapy and counselling in Ashford, Kent and online.</h1>
           <p>
-            Counselling and psychotherapy based in Ashford, Kent. Whether you are seeking
-            support for yourself, your child, or a loved one, you are in the right place.
-            This is a calm and confidential space to feel understood and move forward at
-            your own pace.
+            Whether you are seeking support for yourself, your child, or a loved one, you are
+            in the right place. Counselling HQ is a calm and confidential space to feel
+            understood and move forward at your own pace.
           </p>
-          <div class="hero-buttons">
+          <div class="hero-actions">
             <a class="primary" href="#">Book a free 15-minute call</a>
             <a class="secondary" href="#">Explore how I work</a>
           </div>
         </div>
-        <aside class="hero-card">
-          <h2>Support at your pace</h2>
-          <ul>
-            <li>Face-to-face and online therapy</li>
-            <li>Adults, young people, and children</li>
-            <li>Ashford, Kent private practice</li>
-          </ul>
-        </aside>
+        <div class="hero-image" role="img" aria-label="Soft therapy portrait"></div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Welcome to Counselling HQ</h2>
+        <div class="split">
+          <div class="panel">
+            <strong>Who I help</strong>
+            Adults, young people, and children seeking support with anxiety, low mood,
+            grief, relationship difficulties, and life transitions.
+          </div>
+          <div class="panel">
+            <strong>Where we meet</strong>
+            Face-to-face sessions in Ashford, Kent with online video and telephone sessions
+            available.
+          </div>
+          <div class="panel">
+            <strong>How it feels</strong>
+            A warm, non-judgemental space where your experiences are taken seriously and
+            your voice is valued.
+          </div>
+        </div>
       </section>
 
       <section class="section split">
         <div>
-          <h3>About me</h3>
+          <h2 class="section-title">About me</h2>
           <p>
             Hello, I am Natasha, though most people call me Tasha. Before training as a
             counsellor, I spent 24 years as a teacher, supporting children and young
-            people aged 5 to 18 through academic pressure, emotional challenges, and
-            major life changes.
+            people aged 5 to 18 through academic pressure, emotional challenges, and major
+            life changes.
           </p>
           <p>
             I now work in schools and have a private practice with children and adults in
             short and long-term therapy. I believe in the quiet power of being truly
-            listened to. Therapy does not have to be about being fixed. Sometimes it is
-            about having someone alongside you, helping you slow down and reconnect with
-            your own resources.
+            listened to.
           </p>
         </div>
-        <div class="portrait" role="img" aria-label="Therapy room portrait"></div>
-      </section>
-
-      <section class="section">
-        <h3>Professional background</h3>
-        <div class="split">
-          <div class="tile">
-            <strong>Training and membership</strong>
-            Registered member of the BACP with diplomas in Therapeutic Counselling (CPCAB).
-            Currently completing a Level 5 diploma in Psychotherapeutic Counselling.
-          </div>
-          <div class="tile">
-            <strong>Experience and care</strong>
-            Extensive experience supporting neurodivergent children and adults, including
-            autism, ADHD, sensory differences, and emotional regulation challenges.
-          </div>
+        <div class="panel">
+          <strong>Professional background</strong>
+          Diplomas in Therapeutic Counselling (CPCAB), currently completing a Level 5
+          diploma in Psychotherapeutic Counselling. Registered member of the BACP.
         </div>
       </section>
 
       <section class="section">
-        <h3>How I work</h3>
+        <h2 class="section-title">How I work</h2>
         <p>
-          My approach is integrative, holistic, and person-centred. I do not try to fit you
-          into one model of therapy. I work with you as a whole person, tailoring support
-          to your unique experiences and needs.
+          My approach is integrative, holistic, and person-centred. This means I tailor
+          therapy to your unique experiences, drawing on evidence-based approaches when
+          helpful.
         </p>
-        <div class="badge-list">
-          <span class="badge">CBT-informed tools</span>
-          <span class="badge">Transactional Analysis</span>
-          <span class="badge">Internal Family Systems</span>
-          <span class="badge">Creative and expressive methods</span>
-          <span class="badge">Trauma-informed practice</span>
-          <span class="badge">Psychodynamic therapy</span>
-          <span class="badge">Gestalt therapy</span>
-          <span class="badge">Inner child work</span>
-          <span class="badge">Play therapy</span>
+        <div class="split">
+          <div class="panel">
+            <strong>Integrative tools</strong>
+            CBT-informed tools, Transactional Analysis, Internal Family Systems, Gestalt,
+            psychodynamic therapy, and creative methods.
+          </div>
+          <div class="panel">
+            <strong>Trauma-informed care</strong>
+            A gentle, strengths-based approach that honours your pace and consent.
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Ways I can support you</h2>
+        <div class="split">
+          <div class="panel">
+            <strong>Adults and young people</strong>
+            Anxiety, depression, stress, grief, peri-menopause, neurodiversity, and low
+            self-esteem.
+          </div>
+          <div class="panel">
+            <strong>Children</strong>
+            Anxiety, school challenges, loss, family change, emotional regulation, and
+            play-based support.
+          </div>
         </div>
       </section>
 
       <section class="section split">
-        <article class="tile">
-          <strong>Adults and young people</strong>
-          Anxiety, depression, stress, grief, divorce, communication challenges, low
-          self-esteem, peri-menopause, neurodiversity, and perfectionism.
-        </article>
-        <article class="tile">
-          <strong>Children</strong>
-          Support with anxiety, low mood, friendship issues, school challenges, loss,
-          emotional regulation, and family changes through creative and play-based work.
-        </article>
-      </section>
-
-      <section class="section split">
-        <div class="price-card">
+        <div class="panel">
           <span class="quote">Taking the first step</span>
           <p>
-            You can show up feeling unsure, overwhelmed, or quiet. There is no pressure to
-            have the right words. A free 15-minute introductory call is available.
+            There is no pressure to have the right words. You can show up feeling unsure,
+            overwhelmed, or quiet. A free 15-minute introductory call is available.
           </p>
         </div>
-        <div class="price-card">
+        <div class="panel">
           <strong>Fees</strong>
-          <span>Sessions are 65 pounds per therapeutic hour (50 minutes).</span>
-          <span>180 pounds when booked as a block of three or more.</span>
-          <span>Concessions available for low-waged earners and student counsellors.</span>
+          <p>65 pounds per therapeutic hour (50 minutes).</p>
+          <p>180 pounds when booked as a block of three or more.</p>
+          <p>Concessions available for low-waged earners and student counsellors.</p>
         </div>
       </section>
 
       <section class="section">
-        <h3>Location and sessions</h3>
+        <h2 class="section-title">Location and sessions</h2>
         <div class="split">
-          <div class="tile">
+          <div class="panel">
             <strong>In-person sessions</strong>
             Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.
           </div>
-          <div class="tile">
+          <div class="panel">
             <strong>Online and telephone</strong>
             Online video and telephone sessions are available. I aim to respond to emails
             within 48 hours.
@@ -417,7 +388,7 @@
         call 999 if in immediate danger, or reach Samaritans on 116 123.
       </section>
 
-      <section class="footer-note">
+      <section class="cta-band">
         <span>Email: tashacounsellinghq@gmail.com</span>
         <a href="mailto:tashacounsellinghq@gmail.com">Get in touch</a>
       </section>
