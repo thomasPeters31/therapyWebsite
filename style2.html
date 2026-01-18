@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Style 2 - Counselling HQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #2b2430;
+        --muted: #6c6075;
+        --plum: #2e0e36;
+        --lilac: #f3eef7;
+        --peach: #f7ddd5;
+        --mint: #e7f3f2;
+        --shadow: 0 26px 60px rgba(26, 10, 32, 0.22);
+        --radius: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #ffffff 0%, #f6f1f9 35%, #f7f2f6 100%);
+        min-height: 100vh;
+      }
+
+      .topbar {
+        background: var(--plum);
+        color: white;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .shell {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 30px 20px 90px;
+        display: grid;
+        gap: 36px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        font-family: "DM Serif Display", "Times New Roman", serif;
+        letter-spacing: 0.04em;
+        font-size: 1.15rem;
+        text-transform: uppercase;
+      }
+
+      .menu {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-size: 0.95rem;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .menu a:hover {
+        color: var(--ink);
+      }
+
+      .cta {
+        background: var(--plum);
+        color: white;
+        text-decoration: none;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .hero {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-family: "DM Serif Display", "Times New Roman", serif;
+        font-size: clamp(2.6rem, 1.7rem + 3vw, 4.1rem);
+        margin: 0 0 14px;
+      }
+
+      .hero p {
+        margin: 0 0 22px;
+        color: var(--muted);
+        max-width: 520px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero-actions a {
+        text-decoration: none;
+        padding: 12px 22px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .hero-actions .primary {
+        background: var(--plum);
+        color: white;
+        box-shadow: 0 16px 32px rgba(46, 14, 54, 0.25);
+      }
+
+      .hero-actions .secondary {
+        border: 1px solid var(--plum);
+        color: var(--plum);
+      }
+
+      .hero-card {
+        background: white;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 24px;
+        display: grid;
+        gap: 16px;
+      }
+
+      .hero-card h2 {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      .hero-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+        color: var(--muted);
+      }
+
+      .hero-card li::before {
+        content: "•";
+        color: var(--plum);
+        margin-right: 8px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .panel {
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--lilac);
+      }
+
+      .panel strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .panel.alt {
+        background: var(--mint);
+      }
+
+      .panel.warm {
+        background: var(--peach);
+      }
+
+      .contact {
+        background: var(--plum);
+        color: white;
+        border-radius: 24px;
+        padding: 24px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .contact a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .footer a {
+        text-decoration: none;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      @media (max-width: 720px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .menu {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">New discounted session package now available.</div>
+
+    <main class="shell">
+      <nav>
+        <a class="brand" href="idex.html">Counselling HQ</a>
+        <div class="menu">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services &amp; Fees</a>
+          <a href="#">Contact</a>
+          <a class="cta" href="#">Get in touch</a>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div>
+          <h1>Counselling with grace, clarity, and care.</h1>
+          <p>
+            A rich, plum-forward palette paired with soft pastels and rounded panels for
+            a welcoming, modern private practice feel.
+          </p>
+          <div class="hero-actions">
+            <a class="primary" href="#">Book a session</a>
+            <a class="secondary" href="#">View services</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h2>Ways to connect</h2>
+          <ul>
+            <li>In-person sessions in Kent</li>
+            <li>Secure online appointments</li>
+            <li>Telephone counselling available</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <strong>Individual counselling</strong>
+          Gentle, supportive sessions centered on your wellbeing.
+        </article>
+        <article class="panel alt">
+          <strong>Packages &amp; offers</strong>
+          Flexible pricing for ongoing and short-term care.
+        </article>
+        <article class="panel warm">
+          <strong>Qualified support</strong>
+          Accredited practice with a calm, grounded approach.
+        </article>
+      </section>
+
+      <section class="contact">
+        <strong>Ready to talk?</strong>
+        <span>Reach out for availability and next steps.</span>
+        <a href="#">grace@counsellinghq.co.uk</a>
+      </section>
+
+      <div class="footer">
+        <span>Private practice counselling in Ashford, Kent and online.</span>
+        <a href="#">Back to top</a>
+      </div>
+    </main>
+  </body>
+</html>
