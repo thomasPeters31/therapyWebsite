@@ -1,0 +1,121 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    format: "json"
+    files:
+      - file: "content/site.json"
+        label: "Website Text"
+        name: "site"
+        fields:
+          - { label: "Site Title", name: "meta.title", widget: "string" }
+          - label: "Announcement"
+            name: "announcement"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Link Text", name: "linkText", widget: "string" }
+              - { label: "Link Href", name: "linkHref", widget: "string" }
+          - label: "Brand"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Logo Alt", name: "logoAlt", widget: "string" }
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "Home", name: "home", widget: "string" }
+              - { label: "About", name: "about", widget: "string" }
+              - { label: "How I Work", name: "how", widget: "string" }
+              - { label: "Fees", name: "fees", widget: "string" }
+              - { label: "Contact", name: "contact", widget: "string" }
+              - { label: "CTA Button", name: "cta", widget: "string" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Primary Text", name: "primaryText", widget: "string" }
+              - { label: "Primary Link", name: "primaryHref", widget: "string" }
+              - { label: "Secondary Text", name: "secondaryText", widget: "string" }
+              - { label: "Secondary Link", name: "secondaryHref", widget: "string" }
+              - { label: "Image Aria Label", name: "imageAria", widget: "string" }
+          - label: "Welcome"
+            name: "welcome"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
+              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
+              - { label: "Panel 3 Title", name: "panel3Title", widget: "string" }
+              - { label: "Panel 3 Body", name: "panel3Body", widget: "text" }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body 1", name: "body1", widget: "text" }
+              - { label: "Body 2", name: "body2", widget: "text" }
+              - { label: "Panel Title", name: "panelTitle", widget: "string" }
+              - { label: "Panel Body", name: "panelBody", widget: "text" }
+          - label: "How I Work"
+            name: "how"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
+              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
+          - label: "Support"
+            name: "support"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
+              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
+          - label: "Fees"
+            name: "fees"
+            widget: "object"
+            fields:
+              - { label: "Quote", name: "quote", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Panel Title", name: "panelTitle", widget: "string" }
+              - { label: "Line 1", name: "line1", widget: "string" }
+              - { label: "Line 2", name: "line2", widget: "string" }
+              - { label: "Line 3", name: "line3", widget: "string" }
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
+              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
+          - label: "Note"
+            name: "note"
+            widget: "object"
+            fields:
+              - { label: "Body", name: "body", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email Address", name: "emailAddress", widget: "string" }
+              - { label: "Email Link", name: "emailHref", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "string" }

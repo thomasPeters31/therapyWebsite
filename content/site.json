@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "title": "Counselling HQ - Style 1"
+  },
+  "announcement": {
+    "text": "Free 15-minute introductory calls available.",
+    "linkText": "Get in touch",
+    "linkHref": "#contact"
+  },
+  "brand": {
+    "name": "Counselling HQ",
+    "logoAlt": "Counselling HQ logo"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "how": "How I work",
+    "fees": "Fees",
+    "contact": "Contact",
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "title": "Therapy and counselling in Ashford, Kent and online.",
+    "body": "Whether you are seeking support for yourself, your child, or a loved one, you are in the right place. Counselling HQ is a calm and confidential space to feel understood and move forward at your own pace.",
+    "primaryText": "Book a free 15-minute call",
+    "primaryHref": "#contact",
+    "secondaryText": "Explore how I work",
+    "secondaryHref": "#how",
+    "imageAria": "Soft therapy portrait"
+  },
+  "welcome": {
+    "title": "Welcome to Counselling HQ",
+    "panel1Title": "Who I help",
+    "panel1Body": "Adults, young people, and children seeking support with anxiety, low mood, grief, relationship difficulties, and life transitions.",
+    "panel2Title": "Where we meet",
+    "panel2Body": "Face-to-face sessions in Ashford, Kent with online video and telephone sessions available.",
+    "panel3Title": "How it feels",
+    "panel3Body": "A warm, non-judgemental space where your experiences are taken seriously and your voice is valued."
+  },
+  "about": {
+    "title": "About me",
+    "body1": "Hello, I am Natasha, though most people call me Tasha. Before training as a counsellor, I spent 24 years as a teacher, supporting children and young people aged 5 to 18 through academic pressure, emotional challenges, and major life changes.",
+    "body2": "I now work in schools and have a private practice with children and adults in short and long-term therapy. I believe in the quiet power of being truly listened to.",
+    "panelTitle": "Professional background",
+    "panelBody": "Diplomas in Therapeutic Counselling (CPCAB), currently completing a Level 5 diploma in Psychotherapeutic Counselling. Registered member of the BACP."
+  },
+  "how": {
+    "title": "How I work",
+    "body": "My approach is integrative, holistic, and person-centred. This means I tailor therapy to your unique experiences, drawing on evidence-based approaches when helpful.",
+    "panel1Title": "Integrative tools",
+    "panel1Body": "CBT-informed tools, Transactional Analysis, Internal Family Systems, Gestalt, psychodynamic therapy, and creative methods.",
+    "panel2Title": "Trauma-informed care",
+    "panel2Body": "A gentle, strengths-based approach that honours your pace and consent."
+  },
+  "support": {
+    "title": "Ways I can support you",
+    "panel1Title": "Adults and young people",
+    "panel1Body": "Anxiety, depression, stress, grief, peri-menopause, neurodiversity, and low self-esteem.",
+    "panel2Title": "Children",
+    "panel2Body": "Anxiety, school challenges, loss, family change, emotional regulation, and play-based support."
+  },
+  "fees": {
+    "quote": "Taking the first step",
+    "body": "There is no pressure to have the right words. You can show up feeling unsure, overwhelmed, or quiet. A free 15-minute introductory call is available.",
+    "panelTitle": "Fees",
+    "line1": "£65 per therapeutic hour (50 minutes).",
+    "line2": "£180 when booked as a block of three or more.",
+    "line3": "Concessions available for low-waged earners and student counsellors."
+  },
+  "location": {
+    "title": "Location and sessions",
+    "panel1Title": "In-person sessions",
+    "panel1Body": "Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.",
+    "panel2Title": "Online and telephone",
+    "panel2Body": "Online video and telephone sessions are available. I aim to respond to emails within 48 hours."
+  },
+  "note": {
+    "body": "Counselling HQ is not an emergency service. If you are in crisis, contact your GP, call 999 if in immediate danger, or reach Samaritans on 116 123."
+  },
+  "contact": {
+    "emailAddress": "tashacounsellinghq@gmail.com",
+    "emailHref": "mailto:tashacounsellinghq@gmail.com",
+    "ctaText": "Get in touch"
+  }
+}

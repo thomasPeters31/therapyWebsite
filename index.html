@@ -14,160 +14,221 @@
   </head>
   <body>
     <div class="announcement">
-      Free 15-minute introductory calls available. <a href="#">Get in touch</a>
+      <span data-content="announcement.text">Free 15-minute introductory calls available.</span>
+      <a
+        href="#contact"
+        data-content="announcement.linkText"
+        data-content-attr="href:announcement.linkHref"
+      >
+        Get in touch
+      </a>
     </div>
 
     <main class="page">
       <header>
         <a class="logo" href="index.html">
-          <img src="images/logoImage.png" alt="Counselling HQ logo" />
-          <span>Counselling HQ</span>
+          <img
+            src="images/logoImage.png"
+            alt="Counselling HQ logo"
+            data-content-attr="alt:brand.logoAlt"
+          />
+          <span data-content="brand.name">Counselling HQ</span>
         </a>
         <nav>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#how">How I work</a>
-          <a href="#fees">Fees</a>
-          <a href="#contact">Contact</a>
-          <a class="button" href="#contact">Get in touch</a>
+          <a href="#home" data-content="nav.home">Home</a>
+          <a href="#about" data-content="nav.about">About</a>
+          <a href="#how" data-content="nav.how">How I work</a>
+          <a href="#fees" data-content="nav.fees">Fees</a>
+          <a href="#contact" data-content="nav.contact">Contact</a>
+          <a class="button" href="#contact" data-content="nav.cta">Get in touch</a>
         </nav>
       </header>
 
       <section class="hero" id="home">
         <div>
-          <h1>Therapy and counselling in Ashford, Kent and online.</h1>
-          <p>
+          <h1 data-content="hero.title">Therapy and counselling in Ashford, Kent and online.</h1>
+          <p data-content="hero.body">
             Whether you are seeking support for yourself, your child, or a loved one, you are
             in the right place. Counselling HQ is a calm and confidential space to feel
             understood and move forward at your own pace.
           </p>
           <div class="hero-actions">
-            <a class="primary" href="#">Book a free 15-minute call</a>
-            <a class="secondary" href="#">Explore how I work</a>
+            <a
+              class="primary"
+              href="#contact"
+              data-content="hero.primaryText"
+              data-content-attr="href:hero.primaryHref"
+            >
+              Book a free 15-minute call
+            </a>
+            <a
+              class="secondary"
+              href="#how"
+              data-content="hero.secondaryText"
+              data-content-attr="href:hero.secondaryHref"
+            >
+              Explore how I work
+            </a>
           </div>
         </div>
-        <div class="hero-image" role="img" aria-label="Soft therapy portrait"></div>
+        <div
+          class="hero-image"
+          role="img"
+          aria-label="Soft therapy portrait"
+          data-content-attr="aria-label:hero.imageAria"
+        ></div>
       </section>
 
       <section class="section" id="welcome">
-        <h2 class="section-title">Welcome to Counselling HQ</h2>
+        <h2 class="section-title" data-content="welcome.title">Welcome to Counselling HQ</h2>
         <div class="split">
           <div class="panel">
-            <strong>Who I help</strong>
-            Adults, young people, and children seeking support with anxiety, low mood,
-            grief, relationship difficulties, and life transitions.
+            <strong data-content="welcome.panel1Title">Who I help</strong>
+            <span data-content="welcome.panel1Body">
+              Adults, young people, and children seeking support with anxiety, low mood,
+              grief, relationship difficulties, and life transitions.
+            </span>
           </div>
           <div class="panel">
-            <strong>Where we meet</strong>
-            Face-to-face sessions in Ashford, Kent with online video and telephone sessions
-            available.
+            <strong data-content="welcome.panel2Title">Where we meet</strong>
+            <span data-content="welcome.panel2Body">
+              Face-to-face sessions in Ashford, Kent with online video and telephone sessions
+              available.
+            </span>
           </div>
           <div class="panel">
-            <strong>How it feels</strong>
-            A warm, non-judgemental space where your experiences are taken seriously and
-            your voice is valued.
+            <strong data-content="welcome.panel3Title">How it feels</strong>
+            <span data-content="welcome.panel3Body">
+              A warm, non-judgemental space where your experiences are taken seriously and
+              your voice is valued.
+            </span>
           </div>
         </div>
       </section>
 
       <section class="section split" id="about">
         <div>
-          <h2 class="section-title">About me</h2>
-          <p>
+          <h2 class="section-title" data-content="about.title">About me</h2>
+          <p data-content="about.body1">
             Hello, I am Natasha, though most people call me Tasha. Before training as a
             counsellor, I spent 24 years as a teacher, supporting children and young
             people aged 5 to 18 through academic pressure, emotional challenges, and major
             life changes.
           </p>
-          <p>
+          <p data-content="about.body2">
             I now work in schools and have a private practice with children and adults in
             short and long-term therapy. I believe in the quiet power of being truly
             listened to.
           </p>
         </div>
         <div class="panel">
-          <strong>Professional background</strong>
-          Diplomas in Therapeutic Counselling (CPCAB), currently completing a Level 5
-          diploma in Psychotherapeutic Counselling. Registered member of the BACP.
+          <strong data-content="about.panelTitle">Professional background</strong>
+          <span data-content="about.panelBody">
+            Diplomas in Therapeutic Counselling (CPCAB), currently completing a Level 5
+            diploma in Psychotherapeutic Counselling. Registered member of the BACP.
+          </span>
         </div>
       </section>
 
       <section class="section" id="how">
-        <h2 class="section-title">How I work</h2>
-        <p>
+        <h2 class="section-title" data-content="how.title">How I work</h2>
+        <p data-content="how.body">
           My approach is integrative, holistic, and person-centred. This means I tailor
           therapy to your unique experiences, drawing on evidence-based approaches when
           helpful.
         </p>
         <div class="split">
           <div class="panel">
-            <strong>Integrative tools</strong>
-            CBT-informed tools, Transactional Analysis, Internal Family Systems, Gestalt,
-            psychodynamic therapy, and creative methods.
+            <strong data-content="how.panel1Title">Integrative tools</strong>
+            <span data-content="how.panel1Body">
+              CBT-informed tools, Transactional Analysis, Internal Family Systems, Gestalt,
+              psychodynamic therapy, and creative methods.
+            </span>
           </div>
           <div class="panel">
-            <strong>Trauma-informed care</strong>
-            A gentle, strengths-based approach that honours your pace and consent.
+            <strong data-content="how.panel2Title">Trauma-informed care</strong>
+            <span data-content="how.panel2Body">
+              A gentle, strengths-based approach that honours your pace and consent.
+            </span>
           </div>
         </div>
       </section>
 
       <section class="section" id="support">
-        <h2 class="section-title">Ways I can support you</h2>
+        <h2 class="section-title" data-content="support.title">Ways I can support you</h2>
         <div class="split">
           <div class="panel">
-            <strong>Adults and young people</strong>
-            Anxiety, depression, stress, grief, peri-menopause, neurodiversity, and low
-            self-esteem.
+            <strong data-content="support.panel1Title">Adults and young people</strong>
+            <span data-content="support.panel1Body">
+              Anxiety, depression, stress, grief, peri-menopause, neurodiversity, and low
+              self-esteem.
+            </span>
           </div>
           <div class="panel">
-            <strong>Children</strong>
-            Anxiety, school challenges, loss, family change, emotional regulation, and
-            play-based support.
+            <strong data-content="support.panel2Title">Children</strong>
+            <span data-content="support.panel2Body">
+              Anxiety, school challenges, loss, family change, emotional regulation, and
+              play-based support.
+            </span>
           </div>
         </div>
       </section>
 
       <section class="section split" id="fees">
         <div class="panel">
-          <span class="quote">Taking the first step</span>
-          <p>
+          <span class="quote" data-content="fees.quote">Taking the first step</span>
+          <p data-content="fees.body">
             There is no pressure to have the right words. You can show up feeling unsure,
             overwhelmed, or quiet. A free 15-minute introductory call is available.
           </p>
         </div>
         <div class="panel">
-          <strong>Fees</strong>
-          <p>£65 per therapeutic hour (50 minutes).</p>
-          <p>£180 when booked as a block of three or more.</p>
-          <p>Concessions available for low-waged earners and student counsellors.</p>
+          <strong data-content="fees.panelTitle">Fees</strong>
+          <p data-content="fees.line1">£65 per therapeutic hour (50 minutes).</p>
+          <p data-content="fees.line2">£180 when booked as a block of three or more.</p>
+          <p data-content="fees.line3">
+            Concessions available for low-waged earners and student counsellors.
+          </p>
         </div>
       </section>
 
       <section class="section" id="location">
-        <h2 class="section-title">Location and sessions</h2>
+        <h2 class="section-title" data-content="location.title">Location and sessions</h2>
         <div class="split">
           <div class="panel">
-            <strong>In-person sessions</strong>
-            Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.
+            <strong data-content="location.panel1Title">In-person sessions</strong>
+            <span data-content="location.panel1Body">
+              Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.
+            </span>
           </div>
           <div class="panel">
-            <strong>Online and telephone</strong>
-            Online video and telephone sessions are available. I aim to respond to emails
-            within 48 hours.
+            <strong data-content="location.panel2Title">Online and telephone</strong>
+            <span data-content="location.panel2Body">
+              Online video and telephone sessions are available. I aim to respond to emails
+              within 48 hours.
+            </span>
           </div>
         </div>
       </section>
 
-      <section class="note">
+      <section class="note" data-content="note.body">
         Counselling HQ is not an emergency service. If you are in crisis, contact your GP,
         call 999 if in immediate danger, or reach Samaritans on 116 123.
       </section>
 
       <section class="cta-band" id="contact">
-        <span>Email: tashacounsellinghq@gmail.com</span>
-        <a href="mailto:tashacounsellinghq@gmail.com">Get in touch</a>
+        <span>
+          Email: <span data-content="contact.emailAddress">tashacounsellinghq@gmail.com</span>
+        </span>
+        <a
+          href="mailto:tashacounsellinghq@gmail.com"
+          data-content="contact.ctaText"
+          data-content-attr="href:contact.emailHref"
+        >
+          Get in touch
+        </a>
       </section>
     </main>
+    <script src="js/content.js"></script>
   </body>
 </html>
