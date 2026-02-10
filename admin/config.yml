@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+publish_mode: editorial_workflow
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
@@ -11,111 +13,115 @@ collections:
     format: "json"
     files:
       - file: "content/site.json"
-        label: "Website Text"
+        label: "Website Text (Edit Everything Here)"
         name: "site"
         fields:
-          - { label: "Site Title", name: "meta.title", widget: "string" }
-          - label: "Announcement"
+          - label: "Browser Tab Title"
+            name: "meta.title"
+            widget: "string"
+            hint: "Shows in the browser tab and search results."
+          - label: "Top Announcement Bar"
             name: "announcement"
             widget: "object"
             fields:
-              - { label: "Text", name: "text", widget: "string" }
-              - { label: "Link Text", name: "linkText", widget: "string" }
-              - { label: "Link Href", name: "linkHref", widget: "string" }
-          - label: "Brand"
+              - { label: "Announcement Text", name: "text", widget: "string", hint: "Short message at the very top of the page." }
+              - { label: "Announcement Button Text", name: "linkText", widget: "string" }
+              - { label: "Announcement Button Link", name: "linkHref", widget: "string", hint: "Use #contact to jump to the contact section." }
+          - label: "Brand / Logo"
             name: "brand"
             widget: "object"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Logo Alt", name: "logoAlt", widget: "string" }
-          - label: "Navigation"
+              - { label: "Business Name", name: "name", widget: "string", hint: "Appears next to the logo in the header." }
+              - { label: "Logo Description (for accessibility)", name: "logoAlt", widget: "string" }
+          - label: "Menu Navigation"
             name: "nav"
             widget: "object"
             fields:
-              - { label: "Home", name: "home", widget: "string" }
-              - { label: "About", name: "about", widget: "string" }
-              - { label: "How I Work", name: "how", widget: "string" }
-              - { label: "Fees", name: "fees", widget: "string" }
-              - { label: "Contact", name: "contact", widget: "string" }
-              - { label: "CTA Button", name: "cta", widget: "string" }
-          - label: "Hero"
+              - { label: "Menu: Home", name: "home", widget: "string" }
+              - { label: "Menu: About", name: "about", widget: "string" }
+              - { label: "Menu: How I Work", name: "how", widget: "string" }
+              - { label: "Menu: Fees", name: "fees", widget: "string" }
+              - { label: "Menu: Contact", name: "contact", widget: "string" }
+              - { label: "Header Button Text", name: "cta", widget: "string" }
+          - label: "Hero Section (Top of Page)"
             name: "hero"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Body", name: "body", widget: "text" }
-              - { label: "Primary Text", name: "primaryText", widget: "string" }
-              - { label: "Primary Link", name: "primaryHref", widget: "string" }
-              - { label: "Secondary Text", name: "secondaryText", widget: "string" }
-              - { label: "Secondary Link", name: "secondaryHref", widget: "string" }
-              - { label: "Image Aria Label", name: "imageAria", widget: "string" }
-          - label: "Welcome"
+              - { label: "Main Headline", name: "title", widget: "string", hint: "Large headline at the top." }
+              - { label: "Headline Subtext", name: "subtitle", widget: "string", hint: "Text shown between the main headline and intro paragraph." }
+              - { label: "Intro Paragraph", name: "body", widget: "text" }
+              - { label: "Primary Button Text", name: "primaryText", widget: "string" }
+              - { label: "Primary Button Link", name: "primaryHref", widget: "string", hint: "Use #contact to jump to the contact section." }
+              - { label: "Secondary Button Text", name: "secondaryText", widget: "string" }
+              - { label: "Secondary Button Link", name: "secondaryHref", widget: "string", hint: "Use #how to jump to How I Work." }
+              - { label: "Hero Image Description (for accessibility)", name: "imageAria", widget: "string" }
+          - label: "Welcome Section"
             name: "welcome"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
-              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
-              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
-              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
-              - { label: "Panel 3 Title", name: "panel3Title", widget: "string" }
-              - { label: "Panel 3 Body", name: "panel3Body", widget: "text" }
-          - label: "About"
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Box 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Box 1 Text", name: "panel1Body", widget: "text" }
+              - { label: "Box 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Box 2 Text", name: "panel2Body", widget: "text" }
+              - { label: "Box 3 Title", name: "panel3Title", widget: "string" }
+              - { label: "Box 3 Text", name: "panel3Body", widget: "text" }
+          - label: "About Me Section"
             name: "about"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Body 1", name: "body1", widget: "text" }
-              - { label: "Body 2", name: "body2", widget: "text" }
-              - { label: "Panel Title", name: "panelTitle", widget: "string" }
-              - { label: "Panel Body", name: "panelBody", widget: "text" }
-          - label: "How I Work"
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Paragraph 1", name: "body1", widget: "text" }
+              - { label: "Paragraph 2", name: "body2", widget: "text" }
+              - { label: "Side Box Title", name: "panelTitle", widget: "string" }
+              - { label: "Side Box Text", name: "panelBody", widget: "text" }
+          - label: "How I Work Section"
             name: "how"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Body", name: "body", widget: "text" }
-              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
-              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
-              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
-              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
-          - label: "Support"
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Paragraph", name: "body", widget: "text" }
+              - { label: "Box 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Box 1 Text", name: "panel1Body", widget: "text" }
+              - { label: "Box 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Box 2 Text", name: "panel2Body", widget: "text" }
+          - label: "Ways I Can Support You"
             name: "support"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
-              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
-              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
-              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
-          - label: "Fees"
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Box 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Box 1 Text", name: "panel1Body", widget: "text" }
+              - { label: "Box 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Box 2 Text", name: "panel2Body", widget: "text" }
+          - label: "Fees Section"
             name: "fees"
             widget: "object"
             fields:
-              - { label: "Quote", name: "quote", widget: "string" }
-              - { label: "Body", name: "body", widget: "text" }
-              - { label: "Panel Title", name: "panelTitle", widget: "string" }
-              - { label: "Line 1", name: "line1", widget: "string" }
-              - { label: "Line 2", name: "line2", widget: "string" }
-              - { label: "Line 3", name: "line3", widget: "string" }
-          - label: "Location"
+              - { label: "Quote/Callout Title", name: "quote", widget: "string" }
+              - { label: "Quote/Callout Text", name: "body", widget: "text" }
+              - { label: "Fees Box Title", name: "panelTitle", widget: "string" }
+              - { label: "Fee Line 1", name: "line1", widget: "string" }
+              - { label: "Fee Line 2", name: "line2", widget: "string" }
+              - { label: "Fee Line 3", name: "line3", widget: "string" }
+          - label: "Location and Sessions"
             name: "location"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Panel 1 Title", name: "panel1Title", widget: "string" }
-              - { label: "Panel 1 Body", name: "panel1Body", widget: "text" }
-              - { label: "Panel 2 Title", name: "panel2Title", widget: "string" }
-              - { label: "Panel 2 Body", name: "panel2Body", widget: "text" }
-          - label: "Note"
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Box 1 Title", name: "panel1Title", widget: "string" }
+              - { label: "Box 1 Text", name: "panel1Body", widget: "text" }
+              - { label: "Box 2 Title", name: "panel2Title", widget: "string" }
+              - { label: "Box 2 Text", name: "panel2Body", widget: "text" }
+          - label: "Footer Note (Safety Message)"
             name: "note"
             widget: "object"
             fields:
-              - { label: "Body", name: "body", widget: "text" }
-          - label: "Contact"
+              - { label: "Note Text", name: "body", widget: "text" }
+          - label: "Contact Bar (Bottom of Page)"
             name: "contact"
             widget: "object"
             fields:
               - { label: "Email Address", name: "emailAddress", widget: "string" }
-              - { label: "Email Link", name: "emailHref", widget: "string" }
-              - { label: "CTA Text", name: "ctaText", widget: "string" }
+              - { label: "Email Link", name: "emailHref", widget: "string", hint: "Use mailto:someone@example.com" }
+              - { label: "Button Text", name: "ctaText", widget: "string" }
