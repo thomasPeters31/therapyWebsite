@@ -72,6 +72,8 @@
     "title": "Location and sessions",
     "panel1Title": "In-person sessions",
     "panel1Body": "Cobbs Wood House, Chart Road, Ashford, Kent, TN23 1EP.",
+    "panel1MapText": "Open in Maps",
+    "panel1MapHref": "https://www.google.com/maps/search/?api=1&query=Cobbs%20Wood%20House%2C%20Chart%20Road%2C%20Ashford%2C%20Kent%2C%20TN23%201EP",
     "panel2Title": "Online and telephone",
     "panel2Body": "Online video and telephone sessions are available. I aim to respond to emails within 48 hours."
   },

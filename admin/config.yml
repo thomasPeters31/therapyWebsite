@@ -111,6 +111,8 @@ collections:
               - { label: "Section Title", name: "title", widget: "string" }
               - { label: "Box 1 Title", name: "panel1Title", widget: "string" }
               - { label: "Box 1 Text", name: "panel1Body", widget: "text" }
+              - { label: "Maps Button Text", name: "panel1MapText", widget: "string", hint: "Example: Open in Maps or Get Directions." }
+              - { label: "Maps Link", name: "panel1MapHref", widget: "string", hint: "Paste a Google Maps share/search link for the address." }
               - { label: "Box 2 Title", name: "panel2Title", widget: "string" }
               - { label: "Box 2 Text", name: "panel2Body", widget: "text" }
           - label: "Footer Note (Safety Message)"

@@ -187,11 +187,15 @@ nav a {
 
 /* Hero image panel */
 .hero-image {
+  width: min(100%, clamp(250px, 34vw, 360px));
+  aspect-ratio: 314 / 470;
+  justify-self: center;
   border-radius: var(--radius);
-  min-height: 320px;
-  background:
-    linear-gradient(140deg, rgba(13, 59, 76, 0.25), rgba(155, 193, 200, 0.7)),
-    url("../image.png") center/cover;
+  background-color: var(--sand);
+  background-image: url("../images/tashaImage.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   box-shadow: var(--shadow);
 }
 
@@ -227,6 +231,26 @@ nav a {
 .panel strong {
   display: block;
   margin-bottom: 8px;
+}
+
+/* Address text in location panel */
+.location-address {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+/* Click-to-map link for in-person address */
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--olive);
+  font-weight: 700;
+}
+
+.map-link:hover {
+  text-decoration: underline;
 }
 
 /* Generic list style (available for future sections) */
@@ -281,5 +305,9 @@ nav a {
   nav {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .hero-image {
+    width: min(100%, 320px);
   }
 }
