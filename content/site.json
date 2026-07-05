@@ -5,7 +5,7 @@
   "announcement": {
     "text": "Free 15-minute introductory calls available.",
     "linkText": "Get in touch",
-    "linkHref": "#contact"
+    "linkHref": "mailto:tashacounsellinghq@gmail.com"
   },
   "brand": {
     "name": "Counselling HQ",
@@ -17,7 +17,8 @@
     "how": "How I work",
     "fees": "Fees",
     "contact": "Contact",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "ctaHref": "mailto:tashacounsellinghq@gmail.com"
   },
   "hero": {
     "title": "Counselling and Psychotherapy in Ashford Kent.",
